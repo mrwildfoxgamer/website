@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="js/particles.js"></script>
+    <script src="js/filter.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
@@ -20,7 +21,8 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                   
                 </ul>
                 <div class="theme-toggle">
                     <i class="fas fa-moon"></i>
@@ -40,22 +42,19 @@
           <p>I'm a <span id="typing-text">Web Developer</span></p>
           <a href="#projects" class="btn">View My Work</a>
         </div>
-      </section>
+    </section>
 
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I’m a passionate C++ programmer dedicated to exploring advanced programming concepts and building innovative solutions. With a strong focus on efficiency, problem-solving, and customization, I continuously push my skills to new heights.
-
-                    </p>
-                    <p>My development environment is optimized for versatility, utilizing a dual-boot setup with Windows and Arch Linux. Having successfully completed projects ranging from AI-powered chatbots to Java applications, I’m always on the lookout for the next challenge to tackle.</p>
+                    <p>I'm a passionate C++ programmer dedicated to exploring advanced programming concepts and building innovative solutions. With a strong focus on efficiency, problem-solving, and customization, I continuously push my skills to new heights.</p>
+                    <p>My development environment is optimized for versatility, utilizing a dual-boot setup with Windows and Arch Linux. Having successfully completed projects ranging from AI-powered chatbots to Java applications, I'm always on the lookout for the next challenge to tackle.</p>
                 </div>
                 <div class="skills">
                     <h3>My Skills</h3>
                     <div class="skill-item">
-                        
                         <p>C/C++</p>
                         <div class="skill-bar"><span class="skill-level" style="width: 90%"></span></div>
                     </div>
@@ -71,27 +70,22 @@
                         <p>HTML/CSS</p>
                         <div class="skill-bar"><span class="skill-level" style="width: 50%"></span></div>
                     </div>
-                 
                 </div>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="web">Web</button>
                 <button class="filter-btn" data-filter="application">Application</button>
                 <button class="filter-btn" data-filter="design">Design</button>
-              </div>
-        <div class="container">
-            <h2>My Projects</h2>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
+                <div class="project-card" data-category="web">
                     <img src="images/earth.png" alt="JavaScript website">
                     <h3>Portfolio-Website</h3>
                     <p>A sleek, responsive developer portfolio with smooth scrolling, dark/light mode, animations, a typing effect, a particle background, project filtering, skill bars, and multiple contact options.</p>
@@ -100,23 +94,16 @@
                         <a href="https://github.com/mrwildfoxgamer/website" class="btn">Source Code</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-card" data-category="application">
-                        <!-- Project content -->
-                      </div>
+                <div class="project-card" data-category="application">
                     <img src="images/calculator.png" alt="Java Calculator">
                     <h3>Calculator</h3>
-                    <p>This  program implements a  calculator using Swing for the GUI. It features a JTextField for displaying input and results,  4x4 grid of buttons for digits and basic arithmetic operations (+, -, *, /).</p>
+                    <p>This program implements a calculator using Swing for the GUI. It features a JTextField for displaying input and results, 4x4 grid of buttons for digits and basic arithmetic operations (+, -, *, /).</p>
                     <div class="project-links">
                         <a href="#" class="btn">View Live</a>
                         <a href="#" class="btn">Source Code</a>
                     </div>
                 </div>
-            
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
+                <div class="project-card" data-category="design">
                     <img src="images/image.png" alt="Project 3">
                     <h3>Project Three</h3>
                     <p>Short description of your project</p>
@@ -125,36 +112,27 @@
                         <a href="#" class="btn">Source Code</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
-                    <img src="images/image.png" alt="Project 3">
-                    <h3>Project Three</h3>
+                <div class="project-card" data-category="web">
+                    <img src="images/image.png" alt="Project 4">
+                    <h3>Project Four</h3>
                     <p>Short description of your project</p>
                     <div class="project-links">
                         <a href="#" class="btn">View Live</a>
                         <a href="#" class="btn">Source Code</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
-                    <img src="images/image.png" alt="Project 3">
-                    <h3>Project Three</h3>
+                <div class="project-card" data-category="application">
+                    <img src="images/image.png" alt="Project 5">
+                    <h3>Project Five</h3>
                     <p>Short description of your project</p>
                     <div class="project-links">
                         <a href="#" class="btn">View Live</a>
                         <a href="#" class="btn">Source Code</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
-                    <img src="images/image.png" alt="Project 3">
-                    <h3>Project Three</h3>
+                <div class="project-card" data-category="design">
+                    <img src="images/image.png" alt="Project 6">
+                    <h3>Project Six</h3>
                     <p>Short description of your project</p>
                     <div class="project-links">
                         <a href="#" class="btn">View Live</a>
@@ -165,111 +143,52 @@
         </div>
     </section>
 
-    <section id="projects">
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="application">Application</button>
-            <button class="filter-btn" data-filter="design">Design</button>
-          </div>
+    <section id="certificates">
         <div class="container">
             <h2>My Certificates</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
-                    <img src="images/Alan Johny.png" alt="JavaScript website">
+            <div class="filter-buttons certificates-filter">
+                <button class="filter-btn cert-btn active" data-filter="all">All</button>
+                <button class="filter-btn cert-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn cert-btn" data-filter="programming">Programming</button>
+                <button class="filter-btn cert-btn" data-filter="hackathon">Hackathons</button>
+            </div>
+            <div class="certificates-grid">
+                <div class="certificate-card" data-category="hackathon">
+                    <img src="images/Alan Johny.png" alt="Olabs Hackaton">
                     <h3>Olabs Hackaton</h3>
-                    <p>his certificate recognizes participation in the Olabs Hackathon, where innovative solutions were developed through teamwork and cutting-edge technology</p>
-                   
+                    <p>This certificate recognizes participation in the Olabs Hackathon, where innovative solutions were developed through teamwork and cutting-edge technology</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-card" data-category="application">
-                        <!-- Project content -->
-                      </div>
-                    <img src="images/nasa" alt="Java Calculator">
-                    <h3>NASA  Space Apps Challenge 2023</h3>
-                    <p>Awarded for  participation in the NASA International Space Apps Challenge, contributing innovative solutions to global and space-related challenges.</p>
-
+                <div class="certificate-card" data-category="hackathon">
+                    <img src="images/nasa" alt="NASA Space Apps Challenge">
+                    <h3>NASA Space Apps Challenge 2023</h3>
+                    <p>Awarded for participation in the NASA International Space Apps Challenge, contributing innovative solutions to global and space-related challenges.</p>
                 </div>
-            
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
-                    <img src="images/image.png" alt="Project 3">
-                    <h3>Certificates3</h3>
-                    <p>Short description of your project</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">View Live</a>
-                        <a href="#" class="btn">Source Code</a>
-                    </div>
+                <div class="certificate-card" data-category="web">
+                    <img src="images/image.png" alt="Certificate 3">
+                    <h3>Certificate Three</h3>
+                    <p>Short description of your certificate</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
-                    <img src="images/image.png" alt="Project 3">
-                    <h3>Certificates4</h3>
-                    <p>Short description of your project</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">View Live</a>
-                        <a href="#" class="btn">Source Code</a>
-                    </div>
+                <div class="certificate-card" data-category="programming">
+                    <img src="images/image.png" alt="Certificate 4">
+                    <h3>Certificate Four</h3>
+                    <p>Short description of your certificate</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
-                    <img src="images/image.png" alt="Project 3">
-                    <h3>Certificates5</h3>
-                    <p>Short description of your project</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">View Live</a>
-                        <a href="#" class="btn">Source Code</a>
-                    </div>
+                <div class="certificate-card" data-category="web">
+                    <img src="images/image.png" alt="Certificate 5">
+                    <h3>Certificate Five</h3>
+                    <p>Short description of your certificate</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-card" data-category="web">
-                        <!-- Project content -->
-                      </div>
-                    <img src="images/image.png" alt="Project 3">
-                    <h3>Certificates6</h3>
-                    <p>Short description of your project</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">View Live</a>
-                        <a href="#" class="btn">Source Code</a>
-                    </div>
+                <div class="certificate-card" data-category="programming">
+                    <img src="images/image.png" alt="Certificate 6">
+                    <h3>Certificate Six</h3>
+                    <p>Short description of your certificate</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
-            <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+            <p>&copy; 2025 Alan Johny. All Rights Reserved.</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -277,6 +196,7 @@
             </div>
         </div>
     </footer>
+
     <div class="contact-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>

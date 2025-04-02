@@ -502,3 +502,74 @@ body.dark-mode .burger div {
     background-color: #f0f0f0;
 }
 
+/* Add these styles to your style.css file */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.projects-grid, .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card, .certificate-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img, .certificate-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3, .certificate-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    margin: 0;
+}
+
+.project-card p, .certificate-card p {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    color: var(--text-color-light);
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 1rem;
+}
+
+.project-links .btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
