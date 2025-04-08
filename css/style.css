@@ -80,12 +80,6 @@ nav {
     padding: 20px 0;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #2c3e50;
-}
-
 .nav-links {
     display: flex;
 }
@@ -150,32 +144,10 @@ nav {
     align-items: center;
 }
 
-.about-text, .skills {
+.about-text {
     flex: 1;
     min-width: 300px;
-}
-
-.about-text {
     padding-right: 30px;
-}
-
-.skill-item {
-    margin-bottom: 20px;
-}
-
-.skill-bar {
-    width: 100%;
-    height: 10px;
-    background: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.skill-level {
-    display: block;
-    height: 100%;
-    background: #3498db;
-    border-radius: 5px;
 }
 
 /* Projects Section */
@@ -250,6 +222,12 @@ textarea {
     resize: vertical;
 }
 
+body.dark-mode input, body.dark-mode textarea {
+    background: #333;
+    border: 1px solid #444;
+    color: #f0f0f0;
+}
+
 /* Footer */
 footer {
     background: #2c3e50;
@@ -272,6 +250,7 @@ footer {
 .social-icons a:hover {
     color: #3498db;
 }
+
 .scroll-progress {
     position: fixed;
     top: 0;
@@ -281,229 +260,68 @@ footer {
     width: 0%;
     z-index: 1000;
     transition: width 0.1s ease;
-  }
+}
 
-/* animated section transitions */
+/* Animated section transitions */
 .fade-out {
     opacity: 0;
     transform: translateY(30px);
     transition: none;
-  }
+}
   
-  .fade-in {
+.fade-in {
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.8s ease, transform 0.8s ease;
-  }
+}
 
-  .theme-toggle {
+/* Dark Mode Toggle */
+.theme-toggle {
     cursor: pointer;
     margin-left: 20px;
     font-size: 1.2rem;
     transition: all 0.3s ease;
-  }
+}
   
-  .theme-toggle:hover {
+.theme-toggle:hover {
     transform: rotate(30deg);
-  }
+}
   
-  body.dark-mode {
+/* Dark Mode Styles */
+body.dark-mode {
     background: #1a1a1a;
     color: #f0f0f0;
-  }
+}
   
-  body.dark-mode header {
+body.dark-mode header {
     background: #232323;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  }
+}
   
-  body.dark-mode .nav-links a {
+body.dark-mode .nav-links a {
     color: #f0f0f0;
-  }
+}
   
-  body.dark-mode .project-card {
+body.dark-mode .project-card {
     background: #232323;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  body.dark-mode #contact {
+}
+
+body.dark-mode #contact {
     background: #1a1a1a;
-  }
+}
   
-  body.dark-mode input, body.dark-mode textarea {
-    background: #333;
-    border: 1px solid #444;
-    color: #f0f0f0;
-  }
-  @media screen and (max-width: 768px) {
-    .theme-toggle {
-        position: absolute;
-        right: 80px;
-        top: 20px;
-    }
+body.dark-mode .burger div {
+    background-color: #f0f0f0;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-    
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 92vh;
-        top: 8vh;
-        background: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .nav-links li {
-        opacity: 0;
-        margin: 20px 0;
-    }
-    
-    .burger {
-        display: block;
-    }
-    
-    .nav-active {
-        transform: translateX(0%);
-    }
-    
-    @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0px);
-        }
-    }
-    
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    
-    .toggle .line2 {
-        opacity: 0;
-    }
-    
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-    
-    #home h1 {
-        font-size: 2.5rem;
-    }
-    
-    #home p {
-        font-size: 1.2rem;
-    }
-    
-    .about-text, .skills {
-        flex: 100%;
-    }
-    
-    .about-text {
-        margin-bottom: 40px;
-        padding-right: 0;
-    }
-}
-
-/* Modal Styles */
-.contact-modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.show-modal {
-    display: block !important;
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 30px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-body.dark-mode .modal-content {
-    background-color: #232323;
-    color: #f0f0f0;
-}
-
-.contact-btn {
-    background: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.contact-btn:hover {
-    background: #2980b9;
-    transform: translateY(-3px);
-}
-
-@media screen and (max-width: 768px) {
-    .contact-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 100;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    }
-}
-
-/* Add this to your style.css file */
 body.dark-mode #home {
     background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), url('../images/bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
-body.dark-mode .logo {
-    color: #f0f0f0;
-}
-
-body.dark-mode .burger div {
-    background-color: #f0f0f0;
-}
-
-/* Add these styles to your style.css file */
-
+/* Filter Buttons for Projects and Certificates */
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -514,68 +332,69 @@ body.dark-mode .burger div {
 
 .filter-btn {
     background-color: transparent;
-    border: 1px solid var(--accent-color);
-    color: var(--text-color);
+    border: 1px solid #3498db;
+    color: #333;
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+body.dark-mode .filter-btn {
+    color: #f0f0f0;
+}
+
 .filter-btn.active, .filter-btn:hover {
-    background-color: var(--accent-color);
+    background-color: #3498db;
     color: #fff;
 }
 
-.projects-grid, .certificates-grid {
+/* Certificate Cards */
+.certificates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.project-card, .certificate-card {
-    background-color: var(--card-bg);
+.certificate-card {
+    background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover, .certificate-card:hover {
+body.dark-mode .certificate-card {
+    background-color: #232323;
+}
+
+.certificate-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.project-card img, .certificate-card img {
+.certificate-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.project-card h3, .certificate-card h3 {
+.certificate-card h3 {
     padding: 1rem 1rem 0.5rem;
     margin: 0;
 }
 
-.project-card p, .certificate-card p {
+.certificate-card p {
     padding: 0 1rem 1rem;
     margin: 0;
-    color: var(--text-color-light);
+    color: #666;
 }
 
-.project-links {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem 1rem;
+body.dark-mode .certificate-card p {
+    color: #ccc;
 }
 
-.project-links .btn {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-}
-
-/* Add these styles to your style.css file */
-
+/* Skills Section */
 #skills {
     background-color: #f9f9f9;
     padding: 80px 0;
@@ -585,72 +404,6 @@ body.dark-mode #skills {
     background-color: #232323;
 }
 
-#skills-canvas-container {
-    width: 100%;
-    height: 500px;
-    background-color: rgba(240, 240, 240, 0.3);
-    border-radius: 15px;
-   /* overflow: hidden;*/ /* Remove this line */
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-}
-
-body.dark-mode #skills-canvas-container {
-    background-color: rgba(30, 30, 30, 0.3);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-#skills-canvas {
-    width: 100%;
-    height: 100%;
-}
-
-.skill-label {
-    position: absolute;
-    font-weight: 600;
-    text-align: center;
-    pointer-events: none; /* Keep this */
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;  /* Changed from 100% */
-    height: auto; /* Changed from 100% */
-}
-
-.skill-icon {
-    position: absolute;
-    /* font-size is set dynamically by JS */
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;  /* Changed from 100% */
-    height: auto; /* Changed from 100% */
-    pointer-events: none; /* Added this line */
-}
-
-/* Add this to your nav links to include the Skills section */
-.nav-links li a[href="#skills"] {
-    color: #333;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.nav-links li a[href="#skills"]:hover {
-    color: #3498db;
-}
-
-body.dark-mode .nav-links li a[href="#skills"] {
-    color: #f0f0f0;
-}
-
-/* animated-skills.css */
 #skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -726,10 +479,9 @@ body.dark-mode .nav-links li a[href="#skills"] {
 
 .progress-circle-path {
     fill: none;
-    stroke: #4CAF50; /* You can vary this color based on skill level */
+    stroke: #4CAF50;
     stroke-width: 8;
     transition: stroke-dashoffset 1s ease-out;
-    /* Start invisible */
     stroke-dashoffset: 339.292;
 }
 
@@ -831,8 +583,141 @@ body.dark-mode .nav-links li a[href="#skills"] {
     stroke: #DEA584;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Modal Styles */
+.contact-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.show-modal {
+    display: block !important;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+body.dark-mode .modal-content {
+    background-color: #232323;
+    color: #f0f0f0;
+}
+
+.contact-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .theme-toggle {
+        position: absolute;
+        right: 80px;
+        top: 20px;
+    }
+    
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links li {
+        opacity: 0;
+        margin: 20px 0;
+    }
+    
+    .burger {
+        display: block;
+    }
+    
+    .nav-active {
+        transform: translateX(0%);
+    }
+    
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .toggle .line2 {
+        opacity: 0;
+    }
+    
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    
+    #home p {
+        font-size: 1.2rem;
+    }
+    
+    .about-text {
+        margin-bottom: 40px;
+        padding-right: 0;
+    }
+    
     .skill-item {
         width: 100px;
         height: 140px;
@@ -849,5 +734,13 @@ body.dark-mode .nav-links li a[href="#skills"] {
     
     .skill-name {
         font-size: 12px;
+    }
+    
+    .contact-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     }
 }
